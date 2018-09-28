@@ -1,5 +1,6 @@
 package com.camavilca.orlando.practicando;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
@@ -34,11 +35,34 @@ public class Buscar extends AppCompatActivity {
                 consultar();
                 break;
             case R.id.btnactualizar:
+                actualizar();
                 break;
             case R.id.btneliminar:
+                eliminar();
                 break;
 
         }
+    }
+
+    private void eliminar() {
+        SQLiteDatabase db = con.getWritableDatabase();
+        String[] parametros = {bid.getText().toString()};
+        db.delete(Utilidades.NOMBRE_TABLA,Utilidades.CAMPO_ID+"=?",parametros);
+        Toast.makeText(getApplicationContext(),"SE ELIMINO LOS DATOS",Toast.LENGTH_LONG).show();
+        limpiar();
+        db.close();
+    }
+    private void actualizar() {
+        SQLiteDatabase db = con.getWritableDatabase();
+        String[] parametros = {bid.getText().toString()};
+        ContentValues values = new ContentValues();
+        values.put(Utilidades.CAMPO_NOMBRE,bnom.getText().toString());
+        values.put(Utilidades.CAMPO_UBICACION,bubi.getText().toString());
+        values.put(Utilidades.CAMPO_TELEFONO,btel.getText().toString());
+        db.update(Utilidades.NOMBRE_TABLA,values,Utilidades.CAMPO_ID+"=?",parametros);
+        Toast.makeText(getApplicationContext(),"SE ACTUALZO LOS DATOS",Toast.LENGTH_LONG).show();
+        limpiar();
+        db.close();
     }
 
     private void consultar() {

@@ -20,7 +20,8 @@
         <activity android:name=".Ejercicio2" />
         <activity android:name=".Ejercicio3" />
         <activity android:name=".Insertar" />
-        <activity android:name=".Buscar"></activity>
+        <activity android:name=".Buscar" />
+        <activity android:name=".VistaDatos"></activity>
     </application>
 
 </manifest>

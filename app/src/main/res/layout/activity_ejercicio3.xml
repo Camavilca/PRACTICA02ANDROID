@@ -28,6 +28,13 @@
             android:layout_weight="1"
             android:onClick="onclick"
             android:text="CONSUTAR"/>
+        <Button
+            android:id="@+id/btnlistar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onclick"
+            android:text="LISTAR"/>
     </LinearLayout>
 
 

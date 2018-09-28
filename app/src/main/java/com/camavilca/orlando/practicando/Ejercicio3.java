@@ -3,6 +3,7 @@ package com.camavilca.orlando.practicando;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 public class Ejercicio3 extends AppCompatActivity {
@@ -24,6 +25,10 @@ public class Ejercicio3 extends AppCompatActivity {
             case R.id.btnconsultar:
                 Intent intent1 = new Intent(Ejercicio3.this,Buscar.class);
                 startActivity(intent1);
+                break;
+            case R.id.btnlistar:
+                Intent manito = new Intent(Ejercicio3.this,VistaDatos.class);
+                startActivity(manito);
                 break;
         }
     }
