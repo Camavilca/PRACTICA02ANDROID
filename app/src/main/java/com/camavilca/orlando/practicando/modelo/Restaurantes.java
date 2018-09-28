@@ -6,6 +6,9 @@ public class Restaurantes {
     private String ubicacion;
     private String telefono;
 
+    public Restaurantes() {
+    }
+
     public Restaurantes(int id, String nombre, String ubicacion, String telefono) {
         this.id = id;
         this.nombre = nombre;

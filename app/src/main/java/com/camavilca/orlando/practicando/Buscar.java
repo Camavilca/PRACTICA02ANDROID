@@ -26,7 +26,7 @@ public class Buscar extends AppCompatActivity {
         bnom = (EditText)findViewById(R.id.buscarnombre);
         bubi = (EditText)findViewById(R.id.buscarubicacion);
         btel = (EditText)findViewById(R.id.buscatelefono);
-        con = new Conexion(getApplicationContext(),"db_restaurantes",null,1);
+        con = new Conexion(getApplicationContext(),"restaurante",null,1);
     }
 
     public void Onclick(View view) {

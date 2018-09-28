@@ -15,7 +15,7 @@ public class Conexion extends SQLiteOpenHelper{
     /**
      * contexto->contexto de la aplicacion
      * name->nombre de la base de datos
-     *version ->version de la base de datos
+     * version ->version de la base de datos
      * */
 
     @Override

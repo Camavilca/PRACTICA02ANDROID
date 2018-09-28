@@ -42,7 +42,7 @@ public class Insertar extends AppCompatActivity {
     }
 
     private void registrarUsuarioSQL() {
-        Conexion con = new Conexion(this,"db_restaurantes",null,1);
+        Conexion con = new Conexion(this,"restaurante",null,1);
         SQLiteDatabase bd = con.getWritableDatabase();
 
         String insert = "INSERT INTO "+Utilidades.NOMBRE_TABLA+"" +
@@ -64,7 +64,7 @@ public class Insertar extends AppCompatActivity {
 
     private void registrarUsuario() {
 
-        Conexion con = new Conexion(this,"db_restaurantes",null,1);
+        Conexion con = new Conexion(this,"restaurante",null,1);
         SQLiteDatabase bd = con.getWritableDatabase();//estamos abriendo la base de datos para insertar
 
         ContentValues values = new ContentValues();
